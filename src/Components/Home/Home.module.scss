@@ -1,0 +1,125 @@
+.homeContainer {
+    padding-top: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 1s;
+}
+
+.initialTextContainer {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: white;
+    .welcome {
+        font-size: 3rem;
+    }
+    .introduction {
+        font-size: 4rem;
+        p {
+            color:rgb(187, 0, 187);
+            font-size: inherit;
+            display: inline;
+        }
+    }
+    .role {
+        font-size: 3rem;
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            background-color: rgb(27, 27, 27);
+            color:rgb(187, 0, 187);
+            transition: 0.2s;
+            animation: blink 2s infinite linear;
+            margin-top: 50px;
+            &:hover {
+                background-color: rgb(80,80,80) !important;
+            }
+        }
+    }
+}
+
+.animationContainer {
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 100px black;
+    
+    &>h4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(187, 0, 187);
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        font-weight: bold;
+        filter: drop-shadow(0px 100px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    .logoText{
+        animation: rotateLogo linear 10s infinite;
+        font-size: 8rem;
+    }
+
+    .logoBrackets {
+        animation: rotateLogo linear 10s infinite reverse;
+        font-size: 10rem;
+        position: absolute;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotateX(15deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(15deg) rotateY(360deg);
+    }
+}
+
+@keyframes blink {
+    0% {
+        background-color: rgb(27,27,27)
+    }
+    50% {
+        background-color: rgb(80,80,80)
+    }
+    100% {
+        background-color: rgb(27,27,27)
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .homeContainer {
+        flex-direction: column;
+    }
+    .initialTextContainer {
+        padding-left: 50px;
+        .welcome, .role {
+            font-size: 2rem;
+        }
+        .introduction {
+            font-size: 2.5rem;
+        }
+    }
+}

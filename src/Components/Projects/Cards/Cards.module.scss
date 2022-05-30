@@ -1,0 +1,111 @@
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    overflow:hidden;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 5px magenta;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    img {
+        height: 100%;
+    }
+
+    .cardFooter {
+        position: absolute;
+        width: 100%;
+        height: 0%;
+        bottom: 0;
+        transition: 0.3s;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    &:hover {
+        -webkit-filter: grayscale(0%); 
+        filter: grayscale(0%) !important;
+    }
+    .footerContainer {
+        display: none;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .links {
+        display: flex;
+        font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+        .gitLink {
+            color: rgb(100, 100, 100)
+        }
+        .liveLink {
+            color: rgb(100, 100, 100)
+        }
+        &>* {
+            padding-left: 10px;
+            transition: 0.1s;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .projectName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white
+    }
+
+    .techs {
+        display: flex;
+        font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+        .faReact {
+            color: #61DBFB;
+        }
+        .faSass {
+            color: #CD6799;
+        }
+        .faJs {
+            color: #FFFF00
+        }
+        .faCss {
+            color: #2965f1
+        }
+        .faDatabase {
+            color: #ff9100
+        }
+        &>* {
+            padding-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .card {
+        width: 600px;
+        margin-top: 10px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 350px;
+        .projectName {
+            font-size: 1.2rem;
+        }
+    }
+}
