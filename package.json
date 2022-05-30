@@ -16,7 +16,10 @@
     "sass": "^1.52.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://andrerrh.github.io/portfolioweb",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
