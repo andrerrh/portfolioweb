@@ -27,7 +27,7 @@ export default function Projects() {
 
     return (
         <section ref={projectsRef} className={style.projectsContainer} id='projectsContainer'>
-            <h2 className={style.projectsText}>Projects</h2>
+            <h2 className={style.projectsText}>Projetos</h2>
             <div className={style.cardContainer}>
                 <Card
                     img={ecomImg}
@@ -42,7 +42,7 @@ export default function Projects() {
                     techs={[faReact, faJs, faSass]}
                     classes={['faReact','faJs', 'faSass']}
                     gitLink={'https://github.com/andrerrh/canvasProjectsWebsite'}
-                    liveLink={'https://canvas-projects.herokuapp.com'}
+                    liveLink={'https://andrerrh.github.io/canvasProjectsWebsite/'}
                     projectName={'Canvas Projects'}
                 />
                 <Card
@@ -50,15 +50,15 @@ export default function Projects() {
                     techs={[faJs, faSass]}
                     classes={['faJs', 'faSass']}
                     gitLink={'https://github.com/andrerrh/snake-game'}
-                    liveLink={'https://dev.d22h4gsi7qcb2m.amplifyapp.com'}
+                    liveLink={'https://andrerrh.github.io/snake-game/'}
                     projectName={'Snake Game'}
                 />
                 <Card
                     img={crudImg}
                     techs={[faReact, faCss3, faDatabase]}
                     classes={['faReact', 'faCss', 'faDatabase']}
-                    gitLink={'https://github.com/andrerrh/ecommerce-frontend'}
-                    liveLink={'https://dev.d22h4gsi7qcb2m.amplifyapp.com'}
+                    gitLink={'https://github.com/andrerrh/crud-pcar-frontend'}
+                    liveLink={'https://andrerrh.github.io/crud-pcar-frontend'}
                     projectName={'CRUD Project'}
                 />
             </div>
